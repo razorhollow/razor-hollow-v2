@@ -1,21 +1,25 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
-import Navbar from './navbar/Navbar'
+import { Link } from 'gatsby'
+import { container } from './layout.module.css'
 
-const Container = styled.div`
-    font-color: red;
-`
-
-
-
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
     return (
-            <main>
-                <Navbar />
-                {children}
-            </main>
+            <div className={container}>
+                <nav>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/work">Work</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/expertise">Services</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                    </ul>
+                </nav>
+                <main>
+                    <h1>{pageTitle}</h1>
+                    {children}
+                </main>
+            </div>
     )
 }
 export default Layout

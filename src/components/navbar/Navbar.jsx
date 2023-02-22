@@ -24,10 +24,10 @@ const Navbar = () => {
         <ul>
             <NavItem to="/">Home</NavItem>
             <NavItem to="/work">Work</NavItem>
-            <NavItem to="/expertise">'What We Do</NavItem>
-            <NavItem to="/about">How We Do It</NavItem>
+            <NavItem to="/expertise">Services</NavItem>
+            <NavItem to="/about">About</NavItem>
             <NavItem to="/blog">Blog</NavItem>
-            <NavItem to="/contact">Let's Talk</NavItem>
+            <NavItem to="/contact">Contact</NavItem>
         </ul>
     </Nav>
     )
