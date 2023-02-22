@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container } from './layout.module.css'
-
+import { container, navLinks, navLinkItem, navLinkText, logo } from './layout.module.css'
+import { StaticImage } from 'gatsby-plugin-image'
 const Layout = ({ pageTitle, children }) => {
     return (
             <div className={container}>
                 <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/work">Work</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/expertise">Services</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                    <ul className={navLinks}>
+                        <li className={navLinkItem}><Link to="/" className={navLinkText}><StaticImage src='../images/rh.png' className={logo}/></Link></li>
+                        <li className={navLinkItem}><Link to="/work" className={navLinkText}>Work</Link></li>
+                        <li className={navLinkItem}><Link to="/about" className={navLinkText}>About</Link></li>
+                        <li className={navLinkItem}><Link to="/expertise" className={navLinkText}>Services</Link></li>
+                        <li className={navLinkItem}><Link to="/blog" className={navLinkText}>Blog</Link></li>
+                        <li className={navLinkItem}><Link to="/contact" className={navLinkText}>Contact</Link></li>
                     </ul>
                 </nav>
                 <main>
